@@ -1,0 +1,20 @@
+meta {
+  name: POST
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8000
+  body: file
+  auth: inherit
+}
+
+body:file {
+  file: @file(../bruno.png) @contentType(image/png)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
